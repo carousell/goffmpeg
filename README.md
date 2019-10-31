@@ -23,7 +23,7 @@ go get github.com/xfrr/goffmpeg
 package main
 
 import (
-    "github.com/xfrr/goffmpeg/transcoder"
+    "github.com/carousell/goffmpeg/transcoder"
 )
 
 var inputPath = "/data/testmov"
