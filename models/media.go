@@ -58,6 +58,15 @@ type Mediafile struct {
 	audioFilter           string
 	skipVideo             bool
 	skipAudio             bool
+	otherOptions 		  []string
+}
+
+func (m *Mediafile) AddOtherOptions(optionKey string, optionValue string) {
+	m.otherOptions  = append(m.otherOptions, optionKey, optionValue)
+}
+
+func (m *Mediafile) ObtainOtherOptions() []string {
+	return m.otherOptions
 }
 
 /*** SETTERS ***/
@@ -482,7 +491,7 @@ func (m *Mediafile) ToStrCommand() []string {
 		"InputInitialOffset",
 		"InputPath",
 		"HideBanner",
-
+		"OtherOptions",
 		"Aspect",
 		"Resolution",
 		"FrameRate",
